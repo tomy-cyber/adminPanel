@@ -803,7 +803,7 @@ const AdminUsers = () => {
 
   // Fetch all users
   useEffect(() => {
-    fetch("http://localhost:3001/api/users") // Update with your actual API if needed
+    fetch("https://back-end-f.vercel.app/api/users") // Update with your actual API if needed
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));
@@ -822,7 +822,7 @@ const AdminUsers = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/update-numbers", {
+      const response = await fetch("https://back-end-f.vercel.app/api/update-numbers", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
